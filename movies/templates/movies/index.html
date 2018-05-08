@@ -1,0 +1,74 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" lang="EN">
+    <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="/static/style.css">
+    <title></title>
+</head>
+
+<body>
+    <div class="topnav">
+        <div class="nav-bar">
+            <a href="movies">Movies</a>
+            <a class="active" href="home">Home</a>
+            <a href="series">Series</a>
+        </div>
+    </div>
+
+    <table>
+        <tr>
+            {% for movie in all_movies %}
+            <td class="container">
+                <a href="/movies/{{ movie.id }}/">
+                    <img class="poster" height="300" src= '{{movie.poster}}'>
+                </a>
+            </td>
+            {% endfor%}
+        </tr>
+
+        <tr>
+            {% for movie in all_movies %}
+            <td class="title">
+                <a href="/movies/{{ movie.id }}/">
+                    {{movie.title}}
+                </a>
+            </td>
+            {% endfor %}
+        </tr>
+    </table>    
+<!--
+    <table>
+        <tr>
+            <td class="container">
+                <img class="poster" height="300" src="https://ia.media-imdb.com/images/M/MV5BMjMxNjY2MDU1OV5BMl5BanBnXkFtZTgwNzY1MTUwNTM@._V1_SY1000_CR0,0,674,1000_AL_.jpg">
+            </td>
+            <td class="container">
+                <img class="poster" height="300" src="https://ia.media-imdb.com/images/M/MV5BMTg1MTY2MjYzNV5BMl5BanBnXkFtZTgwMTc4NTMwNDI@._V1_SY1000_CR0,0,674,1000_AL_.jpg">
+            </td>
+        </tr>
+        <tr>
+            <td class="title">
+                Avengers: Infinity War
+            </td>
+            <td class="title">
+                Black Panther
+            </td>
+
+        </tr>
+    </table>
+-->
+    <div class="footer">
+        <div id="footer-items">
+            <a href="http://themoviedb.org">
+                <img src="https://www.themoviedb.org/static_cache/v4/logos/powered-by-rectangle-blue-61ce76f69ce1e4f68a6031d975df16cc184d5f04fa7f9f58ae6412646f2481c1.svg">
+            </a>
+        </div>
+    </div>
+    
+
+</body>
+
+</html>
