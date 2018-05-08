@@ -7,7 +7,7 @@ def index(request):
 
     all_movies = Movie.objects.all()
     context = {'all_movies': all_movies}
-    return render(request, 'movies/index.html', context)
+    return render(request, 'movies/movies.html', context)
 
 
 def detail(request, movie_id):

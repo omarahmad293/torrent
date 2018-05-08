@@ -1,0 +1,27 @@
+{% extends 'movies/base.html' %}
+
+{% block title %}Movies{% endblock %}
+
+{% block main %}
+<table>
+        <tr>
+            {% for movie in all_movies %}
+            <td class="container">
+                <a href="/movies/{{ movie.id }}/">
+                    <img class="poster" height="300" src= '{{movie.poster}}'>
+                </a>
+            </td>
+            {% endfor %}
+        </tr>
+
+        <tr>
+            {% for movie in all_movies %}
+            <td class="title">
+                <a href="/movies/{{ movie.id }}/">
+                    {{movie.title}}
+                </a>
+            </td>
+            {% endfor %}
+        </tr>
+    </table>
+{% endblock %}
