@@ -16,8 +16,8 @@
 
         <tr>
             {% for movie in all_movies %}
-            <td class="title">
-                <a href="/movies/{{ movie.id }}/">
+            <td>
+                <a class="title" href="/movies/{{ movie.id }}/">
                     {{movie.title}}
                 </a>
             </td>
